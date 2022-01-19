@@ -12,7 +12,3 @@
 ### Архитектура проекта:
 ![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/docs/img/services.png "bd")
 
-
-
-### Схема базы данных:
-![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/docs/img/bd.png "bd")
