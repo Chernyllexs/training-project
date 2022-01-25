@@ -11,12 +11,12 @@
 
 ### Сервисы:
 * [Gateway](https://github.com/Chernyllexs/insta-gateway-service)
-* [Post](https://github.com/Chernyllexs/insta-post-service)
-* [Photo](https://github.com/Chernyllexs/insta-photo-service)
+* [Post](https://github.com/Chernyllexs/inst-post-service)
+* [Photo](https://github.com/Chernyllexs/inst-photo-service)
 * [Account](https://github.com/Chernyllexs/insta-account-service)
 * Subscription
-* Comments
-* Score
+* [Comments](https://github.com/Chernyllexs/inst-comment-service)
+* [Score](https://github.com/Chernyllexs/inst-score-service)
 * Auth
 * eMail notification 
 
