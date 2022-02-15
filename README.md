@@ -22,5 +22,10 @@ The following technologies were used in this project:
 
 
 ### Архитектура проекта:
-![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/docs/img/services_v_1.png "bd")
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/services.png )
+
+## Схемы баз данных:
+
+### Post-db
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/posts_bd.png )
 
