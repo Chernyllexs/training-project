@@ -29,3 +29,20 @@ The following technologies were used in this project:
 ### Post-db
 ![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/posts_bd.png )
 
+### Photo-db
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/photos_bd.png )
+
+### Comment-db
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/comments_bd.png)
+
+### Score-db
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/scores_bd.png)
+
+### User-db
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/users_bd.png)
+
+## Диаграммы запросов
+
+### User-db
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/create%20post.png)
+
