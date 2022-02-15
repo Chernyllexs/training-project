@@ -43,6 +43,6 @@ The following technologies were used in this project:
 
 ## Диаграммы запросов
 
-### User-db
+### Create post
 ![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/create%20post.png)
 
