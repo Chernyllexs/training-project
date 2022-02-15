@@ -1,0 +1,126 @@
+version: "3.7"
+
+services:
+  eureka-server:
+    image: eureka-server
+    container_name: eureka
+    ports:
+      - 8761:8761
+    networks: 
+    - inst-network
+
+  gateway-service: 
+    image: inst-gateway
+    container_name: gateway
+    ports:
+      - 9000:9000
+    networks: 
+      - inst-network
+    depends_on: 
+      - eureka-server
+
+  post-service: 
+    image: inst-post
+    container_name: post
+    networks: 
+      - inst-network
+    depends_on: 
+      - eureka-server
+      - postgres-post
+  
+  photo-service: 
+    image: inst-photo
+    container_name: photo
+    volumes: 
+      - photo-storage:/var/lib/data
+      #- .:/var/lib/data
+    networks: 
+      - inst-network
+    depends_on: 
+      - eureka-server
+      - postgres-photo
+  
+  score-service: 
+    image: inst-score
+    container_name: score
+    networks: 
+      - inst-network
+    depends_on: 
+      - eureka-server
+      - postgres-score
+
+  comment-service: 
+    image: inst-comment
+    container_name: comment
+    networks: 
+      - inst-network
+    depends_on: 
+      - eureka-server
+      - postgres-comment
+
+  postgres-post:
+    container_name: post-db
+    image: postgres:13.5
+    environment:
+      POSTGRES_DB: "post"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+    networks:
+      - inst-network
+    restart: unless-stopped
+
+  postgres-photo:
+    container_name: photo-db
+    image: postgres:13.5
+    environment:
+      POSTGRES_DB: "photo"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+    networks:
+      - inst-network
+    restart: unless-stopped
+
+  postgres-comment:
+    container_name: comment-db
+    image: postgres:13.5
+    environment:
+      POSTGRES_DB: "comment"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+    networks:
+      - inst-network
+    restart: unless-stopped
+
+  postgres-score:
+    container_name: score-db
+    image: postgres:13.5
+    environment:
+      POSTGRES_DB: "score"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+    networks:
+      - inst-network
+    restart: unless-stopped
+###################################
+
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+    networks:
+      - inst-network
+
+networks:
+  inst-network:
+    driver: bridge
+
+volumes: 
+  photo-storage:
+
+
+
