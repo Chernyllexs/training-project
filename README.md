@@ -46,3 +46,9 @@ The following technologies were used in this project:
 ### Create post
 ![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/create%20post.png)
 
+### News feed
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/news%20feed.png)
+
+### Add comment
+![Alt-текст](https://github.com/Chernyllexs/training-project/blob/master/doc/images/add%20comment.png)
+
